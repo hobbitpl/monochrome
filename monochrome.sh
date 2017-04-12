@@ -1,3 +1,3 @@
 for f in *.tif; do
-  convert ./"$f" -monochrome ./"x_${f%.jpg}.tif"
+  convert ./"$f" -monochrome ./output_bitonal/"x_${f%}"
 done
