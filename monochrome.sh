@@ -1,3 +1,6 @@
+#!/bin/bash
+
 for f in *.tif; do
-  convert ./"$f" -monochrome ./output_bitonal/"x_${f%}"
+	echo "Conversion of file"."$f"." has started"
+	time convert -colors 2 -density 600x600 -colorspace gray -compress group4 ./"$f" ./output_bitonal/"x_${f%}"
 done
